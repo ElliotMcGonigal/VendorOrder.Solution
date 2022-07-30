@@ -22,5 +22,15 @@ namespace VendorOrder.Solution.Controllers
         }
         [HttpGet("/vendor/new")]
         public ActionResult New() { return View(); }
+        [HttpGet("/vendor/{vendorId}")]
+        public ActionResult Show(int vendorId)
+        {
+            Dictionary<string, object> model = new Dictionary<string, object>();
+            Vendor findVendor = Vendor.Find(vendorId);
+            List<Order> vendorOrder = findVendor.VendorOrders;
+            model.Add("vendor", findVendor);
+            model.Add("orders", vendorOrder);
+            return View(model);
+        }
     }
 }
