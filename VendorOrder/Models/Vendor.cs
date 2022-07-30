@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using VendorOrder.Models;
 using System;
 
 namespace VendorOrder.Models
@@ -17,6 +18,7 @@ namespace VendorOrder.Models
       VendorDescription = vendorDescription;
       _instances.Add(this);
       Id = _instances.Count;
+      VendorOrders = new List<Order>{};
     }
 
     public static List<Vendor> GetAll()
@@ -24,14 +26,19 @@ namespace VendorOrder.Models
       return _instances;
     }
 
-    public static void ClearAll()
-    {
-      _instances.Clear();
-    }
-
     public static Vendor Find(int searchId)
     {
       return _instances[searchId - 1];
+    }
+
+    public void AddOrder(Order newOrder)
+    {
+      VendorOrders.Add(newOrder);
+    }
+
+    public static void ClearAll()
+    {
+      _instances.Clear();
     }
   }
 }
