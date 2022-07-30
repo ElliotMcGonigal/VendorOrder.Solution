@@ -10,7 +10,7 @@ namespace VendorOrder.Models
     public string OrderDate {get; set;}
     public string OrderPrice {get; set;}
 
-    public Order (string orderTitle, string OrderDescription, string OrderDate, string OrderPrice)
+    public Order (string orderTitle, string orderDescription, string orderDate, string orderPrice)
     {
       OrderTitle = orderTitle;
       OrderDescription = orderDescription;

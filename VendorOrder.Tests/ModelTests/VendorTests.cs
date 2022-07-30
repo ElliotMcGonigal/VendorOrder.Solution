@@ -51,5 +51,13 @@ namespace VendorOrder.Tests
       Vendor testVendor = new Vendor("a", "b");
       Assert.AreEqual(testVendor, Vendor.Find(1));
     }
+    [TestMethod]
+    public void TestingTheVendorOrderCreator()
+    {
+      Vendor testVendor = new Vendor("a", "b");
+      Order newOrder = new Order("a", "b", "c", "d");
+      testVendor.AddOrder(newOrder);
+      Assert.AreEqual(newOrder, testVendor.VendorOrders[0]);
+    }
   }
 }
