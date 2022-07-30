@@ -37,7 +37,7 @@ namespace VendorOrder
 
       app.Run(async (context) =>
       {
-        await context.Response.WriteAsync("Welcome to your site Pierre!");
+        await context.Response.WriteAsync("Page Not Loaded Properly");
       });
     }
   }

@@ -13,7 +13,6 @@ namespace VendorOrder
         .UseIISIntegration()
         .UseStartup<Startup>()
         .Build();
-
       host.Run();
     }
   }
