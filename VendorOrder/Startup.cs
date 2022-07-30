@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace VendorOrderTracker
+namespace VendorOrder
 {
   public class Startup
   {
@@ -37,7 +37,7 @@ namespace VendorOrderTracker
 
       app.Run(async (context) =>
       {
-        await context.Response.WriteAsync("Hello World!");
+        await context.Response.WriteAsync("Welcome to your site Pierre!");
       });
     }
   }
