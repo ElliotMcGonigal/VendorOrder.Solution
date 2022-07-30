@@ -14,5 +14,13 @@ namespace VendorOrder.Solution.Controllers
             List<Vendor> listVendors = Vendor.GetAll();
             return View(listVendors);
         }
+        [HttpPost("/vendor")]
+        public ActionResult Create(string vendorName, string description)
+        {
+            Vendor newVendor = new Vendor(vendorName, description);
+            return RedirectToAction("Index");
+        }
+        [HttpGet("/vendor/new")]
+        public ActionResult New() { return View(); }
     }
 }
