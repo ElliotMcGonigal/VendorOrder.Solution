@@ -4,6 +4,9 @@
 
 @using VendorOrder.Models;
 
+<h2>Vendor: @Model["vendor"].VendorName</h2>
+<h4>Description of vendor: @Model["vendor"].VendorDescription</h4>
+
 <h3>Here are all the orders:</h3>
 
 @if (@Model["orders"].Count == 0)
@@ -19,3 +22,5 @@
 </ol>
 
 <h3><a href='/vendor/@Model["vendor"].Id/order/new'>Create New Order!</a></h3>
+
+<h3><a href='/vendor'>Back to vendors!</a></h3>
