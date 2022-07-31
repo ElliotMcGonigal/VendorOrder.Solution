@@ -1,0 +1,15 @@
+@{
+  Layout = "_Layout";
+}
+
+@using VendorOrder.Models;
+
+<h3>Here are your order details:</h3>
+
+
+<h3>Title: @Model["order"].OrderTitle</h3>
+<p>Description: @Model["order"].OrderDescription</p>
+<p>Date: @Model["order"].OrderDate</p>
+<p>Price: @Model["order"].OrderPrice</p>
+
+<p><a href='/vendor/@Model["vendor"].Id'>Back to current vendor</a></p>
