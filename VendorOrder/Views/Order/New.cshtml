@@ -1,0 +1,18 @@
+@{
+  Layout = "_Layout";
+}
+
+<body>
+  <h1>Fill in the following details to add a new order to your vendor!</h1>
+  <form action="/order" method="post">
+  <label for="orderTitle">Order's Title</label>
+  <input id="orderTitle" name="orderTitle" type="text">
+  <label for="orderDescription">Order's Description</label>
+  <input id="orderDescription" name="orderDescription" type="text">
+  <label for="orderDate">Date of Order</label>
+  <input id="orderDate" name="orderDate" type="text">
+  <label for="orderPrice">Price</label>
+  <input id="orderPrice" name="orderPrice" type="text">
+  <button type="submit">Create New Order!</button>
+  </form>
+</body>
